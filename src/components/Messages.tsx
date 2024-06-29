@@ -20,7 +20,7 @@ type MessagesProps = {
 const Messages:React.FC<MessagesProps> = ({chats}) => {
 
     return (
-        <div className="p-4 space-y-4 no-scrollbar  mt-[80px]  h-[500px] overflow-y-scroll	">
+        <div className="p-4 space-y-4 no-scrollbar  mb-1 h-[520px] overflow-y-scroll	">
           {chats.map(chat => (
             <Message key={chat.id} chat={chat} />
           ))}

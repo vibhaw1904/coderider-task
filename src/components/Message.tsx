@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 interface Sender {
   image: string;
@@ -21,6 +21,11 @@ interface MessageProps {
 const Message: React.FC<MessageProps> = ({ chat }) => {
   const { message, sender } = chat;
 
+    // useEffect(()=>{
+    //   console.log(message)
+    //   console.log(sender);
+      
+    // },[chat.id])
   const messageClass = sender.self ? 'bg-blue-500 text-white rounded-t-lg' : 'rounded-b-lg bg-white text-gray-900';
   const messageContainerClass = sender.self ? 'justify-end' : 'justify-start';
   const textCol=sender.self?'text-[#FFFFFF]':'text-[#606060]'
@@ -31,7 +36,7 @@ const Message: React.FC<MessageProps> = ({ chat }) => {
         <img src={sender.image} alt="Sender" className="w-10 h-10 rounded-full  mr-3" />
       )}
       <div className={`p-3  ${messageClass} max-w-md shadow-md`}>
-        <p className={`whitespace-pre-wrap ${textCol}`}>{message}</p>
+        <p className={` ${textCol}`}>{message}</p>
       </div>
      
     </div>
