@@ -32,7 +32,7 @@ const manifestForPlugIn: Partial<VitePWAOptions> = {
         src: '/maskable_icon.png',
         sizes: '512x512',
         type: 'image/png',
-        purpose: 'maskable',
+        purpose: 'any maskable',
       },
     ],
     theme_color: '#171717',
