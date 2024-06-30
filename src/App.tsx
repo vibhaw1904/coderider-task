@@ -18,14 +18,14 @@ function App() {
   },[])
 console.log(chats)
   return (
-    <div className='flex justify-center mt-7 '>
+    
  <div className='bg-[#FAF9F4] align-middle rounded-[32px] w-[375px] h-[812px]  ' >
     <Appbar/>
     <Header/>
     <Messages chats={chats} />
     <Reply/>
     </div>
-    </div>
+    
    
   )
 }
